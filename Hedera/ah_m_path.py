@@ -153,15 +153,14 @@ class ProjectController(app_manager.RyuApp):
         paths_with_ports = self.add_ports_to_paths(paths, first_port, last_port)
         switches_in_paths = set().union(*paths)
         #print("switches_in_paths is ", switches_in_paths)
-        #print("Example for paths_with_ports [{1: (1, 2), 2: (1, 3)}, {1: (1, 3), 4: (1, 3), 3: (1, 3), 2: (2, 3)}] \n" ,
-        "host path is from s1 port 1 to port 2 then you are now at s2 use port 1 to port 3 to connect to dest host")
+        #print("Example for paths_with_ports [{1: (1, 2), 2: (1, 3)}, {1: (1, 3), 4: (1, 3), 3: (1, 3), 2: (2, 3)}] \n" ,"host path is from s1 port 1 to port 2 then you are now at s2 use port 1 to port 3 to connect to dest host")
         #print(" paths_with_ports is ", paths_with_ports)
         single_path=paths_with_ports[0]
         #print(" Single path from src switch to dst switch is ", single_path)
         key_val= [key_val for key_val in single_path.keys()]
         #print("****************************key_val of single path is ",key_val)
         
-        for j in range(len(key_val) ):
+        #for j in range(len(key_val) ):
             #print("at j = " ,j ," key_val = ",key_val[j])
             #print("single_path   ", single_path[key_val[j]][0])
             
