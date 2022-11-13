@@ -84,7 +84,7 @@ class ProjectController(app_manager.RyuApp):
                 else:
                     stack.append((next, path + [next]))
         #print("stack after while is ", stack)
-        print ("Available paths from src_switch", src, " to dst_switch", dst, " : ", paths)
+        #print ("Available paths from src_switch", src, " to dst_switch", dst, " : ", paths)
         return paths
 
     def get_link_cost(self, s1, s2):
@@ -144,42 +144,42 @@ class ProjectController(app_manager.RyuApp):
     def install_paths(self, src_switch, first_port, dst_switch, last_port, ip_src, ip_dst):
         computation_start = time.time()
         paths = self.get_optimal_paths(src_switch, dst_switch)
-        print("paths from src_switch  ",src_switch, " to dst_switch  ",dst_switch, " are ",paths)
+        #print("paths from src_switch  ",src_switch, " to dst_switch  ",dst_switch, " are ",paths)
         pw = []
         for path in paths:
             pw.append(self.get_path_cost(path))
-            print (path, "cost = ", pw[len(pw) - 1])
+            #print (path, "cost = ", pw[len(pw) - 1])
         sum_of_pw = sum(pw)
         paths_with_ports = self.add_ports_to_paths(paths, first_port, last_port)
         switches_in_paths = set().union(*paths)
         #print("switches_in_paths is ", switches_in_paths)
-        print("Example for paths_with_ports [{1: (1, 2), 2: (1, 3)}, {1: (1, 3), 4: (1, 3), 3: (1, 3), 2: (2, 3)}] \n" ,
+        #print("Example for paths_with_ports [{1: (1, 2), 2: (1, 3)}, {1: (1, 3), 4: (1, 3), 3: (1, 3), 2: (2, 3)}] \n" ,
         "host path is from s1 port 1 to port 2 then you are now at s2 use port 1 to port 3 to connect to dest host")
-        print(" paths_with_ports is ", paths_with_ports)
+        #print(" paths_with_ports is ", paths_with_ports)
         single_path=paths_with_ports[0]
-        print(" Single path from src switch to dst switch is ", single_path)
+        #print(" Single path from src switch to dst switch is ", single_path)
         key_val= [key_val for key_val in single_path.keys()]
-        print("****************************key_val of single path is ",key_val)
+        #print("****************************key_val of single path is ",key_val)
         
         for j in range(len(key_val) ):
-            print("at j = " ,j ," key_val = ",key_val[j])
-            print("single_path   ", single_path[key_val[j]][0])
+            #print("at j = " ,j ," key_val = ",key_val[j])
+            #print("single_path   ", single_path[key_val[j]][0])
             
         
-        print("ip_src  = ",ip_src, " ip_dst = ",ip_dst)
+        #print("ip_src  = ",ip_src, " ip_dst = ",ip_dst)
         for j in range(len(key_val) ):
-            print("src_sw_dp = ",key_val[j])
+            #print("src_sw_dp = ",key_val[j])
             if(j== len(key_val)-1):
                 #last switch in path
-                print("self.adjacency = ",self.adjacency)
+                #print("self.adjacency = ",self.adjacency)
                 src_sw_dp = self.datapath_list[key_val[j]]
                 mac= self.arp_table[ip_src]
 
                 #print("src host is connected to port ", self.hosts[mac][key_val[len(key_val)-1]], " src_sw_dp = ",key_val[j])
                 final_out = single_path[key_val[len(key_val)-1]][1]  #self.hosts[mac][key_val[len(key_val)-1]]
-                print("Last switch in the loop port number is ",final_out)
+                #print("Last switch in the loop port number is ",final_out)
                 src_sw_dp = self.datapath_list[key_val[j]]
-                print("Packet is recevied from port  ",self.input_port)
+                #print("Packet is recevied from port  ",self.input_port)
                 ofp = src_sw_dp.ofproto
                 ofp_parser = src_sw_dp.ofproto_parser
                 match_ip = ofp_parser.OFPMatch(
@@ -205,10 +205,10 @@ class ProjectController(app_manager.RyuApp):
                 #First switch in path
                 dst_sw_dp = self.datapath_list[key_val[0]]
                 final_out = single_path[key_val[0]][0]
-                print("first switch in the loop port number is ",final_out)
+                #print("first switch in the loop port number is ",final_out)
                  
                 #print("initial ip is ",self.hosts)
-                print("Packet is recevied from port  ",self.input_port)
+                #print("Packet is recevied from port  ",self.input_port)
                 ofp = src_sw_dp.ofproto
                 ofp_parser = dst_sw_dp.ofproto_parser
                 match_ip = ofp_parser.OFPMatch(
@@ -237,7 +237,7 @@ class ProjectController(app_manager.RyuApp):
                 src_sw_dp = self.datapath_list[key_val[j]]
                 #dst_sw_dp = self.datapath_list[key_val[j+1]] 
                 #print("dst_sw_dp = ",dst_sw_dp)
-                print("out port from src switch is ",self.adjacency[key_val[j]][key_val[j+1]])
+                #print("out port from src switch is ",self.adjacency[key_val[j]][key_val[j+1]])
                 #print("in port of dst  switch is ",self.adjacency[key_val[j+1]][key_val[j]])
                 final_out= self.adjacency[key_val[j]][key_val[j+1]]
                 ofp = src_sw_dp.ofproto
@@ -432,7 +432,7 @@ class ProjectController(app_manager.RyuApp):
         
         if pkt.get_protocol(ipv4.ipv4):  ##################### inhibit duplicate
             match = parser.OFPMatch(eth_type=eth.ethertype)    
-            print("ip_v4 Received ")    
+            #print("ip_v4 Received ")    
             return
 
         if pkt.get_protocol(ipv6.ipv6):  # Drop the IPV6 Packets.
@@ -450,8 +450,8 @@ class ProjectController(app_manager.RyuApp):
         if src not in self.hosts:
             self.hosts[src] = (dpid, in_port)
             self.input_port = in_port
-            print("inside packetin, sel.hosts 'mac': (sw, port) is ",self.hosts)
-            print("inside packetin,  src not in self.hosts , dst is ",dst)
+            #print("inside packetin, sel.hosts 'mac': (sw, port) is ",self.hosts)
+            #print("inside packetin,  src not in self.hosts , dst is ",dst)
             #after first h2 ping -c1 h1
             #inside packetin, sel.hosts is  {'00:00:02:00:00:00': (3, 5)}
             #inside packetin,  src not in self.hosts  ff:ff:ff:ff:ff:ff
@@ -466,7 +466,7 @@ class ProjectController(app_manager.RyuApp):
             dst_ip = arp_pkt.dst_ip
             if arp_pkt.opcode == arp.ARP_REPLY: # IF REPLY IS RECEIVED.
                 self.arp_table[src_ip] = src
-                print("arp_pkt.opcode == arp.ARP_REPLY , self.arp_table is ",self.arp_table)
+                #print("arp_pkt.opcode == arp.ARP_REPLY , self.arp_table is ",self.arp_table)
                 #key of arp_table is ip, value is src_mac
                 h1 = self.hosts[src]        #(dpid, in_port)
                 h2 = self.hosts[dst]        #(dpid, in_port)
@@ -476,19 +476,19 @@ class ProjectController(app_manager.RyuApp):
                 #self.disable_packet_in = False
             elif arp_pkt.opcode == arp.ARP_REQUEST: #IF REQUEST IS GOING TO INITIATED.
                 #لم يتم تجهيزه بعد
-                print(" arp.ARP_REQUEST ")
+                #print(" arp.ARP_REQUEST ")
                 if dst_ip in self.arp_table:
                     self.arp_table[src_ip] = src
                     dst_mac = self.arp_table[dst_ip]
                     h1 = self.hosts[src]
                     h2 = self.hosts[dst_mac]
-                    print("inside ARP_REQUEST h1= ", h1 ," h2= ",h2, " src_ip = ",src_ip, " dst_ip = ",dst_ip)
+                    #print("inside ARP_REQUEST h1= ", h1 ," h2= ",h2, " src_ip = ",src_ip, " dst_ip = ",dst_ip)
                     out_port = self.install_paths(h1[0], h1[1], h2[0], h2[1], src_ip, dst_ip)
                     #self.disable_packet_in = False
                     self.install_paths(h2[0], h2[1], h1[0], h1[1], dst_ip, src_ip) # reverse
                     #self.disable_packet_in = False
 
-        print ("please switch with dpid ",datapath.id ,"your output port is ", out_port)
+        #print ("please switch with dpid ",datapath.id ,"your output port is ", out_port)
 
         actions = [parser.OFPActionOutput(out_port)]
 
@@ -515,7 +515,7 @@ class ProjectController(app_manager.RyuApp):
 
     @set_ev_cls(event.EventSwitchLeave, MAIN_DISPATCHER) #del datapath_list[dpid], del adjacency
     def switch_leave_handler(self, event):
-        print( event)
+        #print( event)
         switch = event.switch.dp.id
         if switch in self.switches:
             del self.switches[switch]
