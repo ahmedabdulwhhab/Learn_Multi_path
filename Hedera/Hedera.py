@@ -304,9 +304,9 @@ class ShortestForwarding(app_manager.RyuApp):
                         arp_tpa=flow_info[2]
                     )
 			self.add_flow(datapath, 30, match_ip, actions,
-					  idle_timeout=60, hard_timeout=0)                    
+					  idle_timeout=30, hard_timeout=50)                    
 			self.add_flow(datapath, 30, match_arp, actions,
-					  idle_timeout=60, hard_timeout=0)                      
+					  idle_timeout=30, hard_timeout=50)                      
 		else:
 			pass
 
