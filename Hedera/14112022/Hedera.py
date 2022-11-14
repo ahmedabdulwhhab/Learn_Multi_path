@@ -340,7 +340,7 @@ class ShortestForwarding(app_manager.RyuApp):
 				self.send_flow_mod(datapath, flow_info, src_port, dst_port)
 		""" a correction te be added for only destination as for ends with len(path)-1
 		"""
-		self.send_flow_mod(datapaths[path[-1]], flow_info, in_port, in_port) 
+		#self.send_flow_mod(datapaths[path[-1]], flow_info, in_port, in_port) 
 		""" a correction to be added for same swich
                               key0   key1
         self.awareness.access {(13  , 3): ('10.0.0.1', '00:00:01:00:00:00'), (13, 4): ('10.0.0.2', '00:00:02:00:00:00')}
