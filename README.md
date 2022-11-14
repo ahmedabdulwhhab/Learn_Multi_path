@@ -63,12 +63,13 @@ Note: Before doing the experiment, you should change the controller's IP address
 
 Firstly, start up the network. An example is shown below:
 
-    $ sudo python ryu/ryu/app/Hedera/fattree4.py
+    $ sudo mn -c && sudo python3 my_topo.py
+
 
 And then, go into the top directory of Ryu, and run the application. You are suggested to add arguments when starting Ryu. An example is shown below:
 
     $ cd ryu
-    $ ryu-manager --observe-links ryu/app/Hedera/Hedera.py --k_paths=4 --weight=hop --fanout=4
+    $  clear && sudo ryu-manager ../../projects/Learn_Multi_path/Hedera/14112022/Hedera.py    /home/ubuntu/sdn/sources/flowmanager/flowmanager.py  --k_paths=4 --weight=hop --fanout=4 --observe-links --ofp-tcp-listen-port 6633
 
 or:
 
@@ -78,7 +79,7 @@ NOTE: After these, we should wait for the network to complete the initiation for
 
 After that, test the correctness of Hedera:
 
-    mininet> pingall
+    mininet> pingall              - Gives Error
     mininet> iperf
 
 If you want to show the collected information, you can set the parameters in setting.py. Also, you can change the setting as you like, such as the discovery period and monitor period. After that, you can see the information shown in the terminal.
