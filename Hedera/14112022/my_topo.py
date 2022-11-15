@@ -7,38 +7,46 @@ from mininet.cli import CLI
 from mininet.net import Mininet
 from mininet.node import RemoteController
 from mininet.term import makeTerm
+from mininet.topo import Topo
+from mininet.net import Mininet
+from mininet.log import setLogLevel
+from mininet.link import TCLink  # So we can rate limit links
+from mininet.cli import CLI  # So we can bring up the Mininet CLI
+from mininet.node import OVSSwitch, Controller, RemoteController
+
 
 if '__main__' == __name__:
     net = Mininet(controller=RemoteController)
 
-    c0 = net.addController('c0', port=6633)
+    c0 = net.addController(controller=RemoteController,
+        ip="192.168.1.4", port=6633)
 
 
-    sc1 = net.addSwitch('sc1')
-    sc2 = net.addSwitch('sc2')
-    sc3 = net.addSwitch('sc3')
-    sc4 = net.addSwitch('sc4')
+    sc1 = net.addSwitch('sc1',cls=OVSSwitch, protocols='OpenFlow13')
+    sc2 = net.addSwitch('sc2',cls=OVSSwitch, protocols='OpenFlow13')
+    sc3 = net.addSwitch('sc3',cls=OVSSwitch, protocols='OpenFlow13')
+    sc4 = net.addSwitch('sc4',cls=OVSSwitch, protocols='OpenFlow13')
     
     
-    sp11 = net.addSwitch('sp11')
-    sp12 = net.addSwitch('sp12')
-    sp13 = net.addSwitch('sp13')
-    sp14 = net.addSwitch('sp14')
-    
-    sp21 = net.addSwitch('sp21')
-    sp22 = net.addSwitch('sp22')
-    sp23 = net.addSwitch('sp23')
-    sp24 = net.addSwitch('sp24')
-    
-    sp31 = net.addSwitch('sp31')
-    sp32 = net.addSwitch('sp32')
-    sp33 = net.addSwitch('sp33')
-    sp34 = net.addSwitch('sp34')
-    
-    sp41 = net.addSwitch('sp41')
-    sp42 = net.addSwitch('sp42')
-    sp43 = net.addSwitch('sp43')
-    sp44 = net.addSwitch('sp44')
+    sp11 = net.addSwitch('sp11',cls=OVSSwitch, protocols='OpenFlow13')
+    sp12 = net.addSwitch('sp12',cls=OVSSwitch, protocols='OpenFlow13')
+    sp13 = net.addSwitch('sp13',cls=OVSSwitch, protocols='OpenFlow13')
+    sp14 = net.addSwitch('sp14',cls=OVSSwitch, protocols='OpenFlow13')
+                               
+    sp21 = net.addSwitch('sp21',cls=OVSSwitch, protocols='OpenFlow13')
+    sp22 = net.addSwitch('sp22',cls=OVSSwitch, protocols='OpenFlow13')
+    sp23 = net.addSwitch('sp23',cls=OVSSwitch, protocols='OpenFlow13')
+    sp24 = net.addSwitch('sp24',cls=OVSSwitch, protocols='OpenFlow13')
+                               
+    sp31 = net.addSwitch('sp31',cls=OVSSwitch, protocols='OpenFlow13')
+    sp32 = net.addSwitch('sp32',cls=OVSSwitch, protocols='OpenFlow13')
+    sp33 = net.addSwitch('sp33',cls=OVSSwitch, protocols='OpenFlow13')
+    sp34 = net.addSwitch('sp34',cls=OVSSwitch, protocols='OpenFlow13')
+                               
+    sp41 = net.addSwitch('sp41',cls=OVSSwitch, protocols='OpenFlow13')
+    sp42 = net.addSwitch('sp42',cls=OVSSwitch, protocols='OpenFlow13')
+    sp43 = net.addSwitch('sp43',cls=OVSSwitch, protocols='OpenFlow13')
+    sp44 = net.addSwitch('sp44',cls=OVSSwitch, protocols='OpenFlow13')
 
     h1 = net.addHost('h1',mac='00:00:01:00:00:00')
     h2 = net.addHost('h2',mac='00:00:02:00:00:00')
