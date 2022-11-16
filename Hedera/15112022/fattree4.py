@@ -1,3 +1,4 @@
+########################
 #!/usr/bin/env python
 
 from mininet.net import Mininet
@@ -89,8 +90,8 @@ class Fattree(Topo):
             for i in range(0, int(end)):
                 for j in range(0, int(end)):
                     self.addLink(
-                        self.CoreSwitchList[i*end+j],
-                        self.AggSwitchList[x+i],
+                        self.CoreSwitchList[int(i*end+j)],
+                        self.AggSwitchList[int(x+i)],
                         bw=bw_c2a)
 
         logger.debug("Add link Agg to Edge.")
@@ -143,7 +144,7 @@ def pingTest(net):
     net.pingAll()
 
 
-def createTopo(pod, density, ip="127.0.0.1", port=6633, bw_c2a=0.2, bw_a2e=0.1, bw_h2a=0.05):
+def createTopo(pod, density, ip="192.168.1.4", port=6633, bw_c2a=0.2, bw_a2e=0.1, bw_h2a=0.05):
     logging.debug("LV1 Create Fattree")
     topo = Fattree(pod, density)
     topo.createTopo()
