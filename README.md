@@ -75,7 +75,12 @@ After that, test the correctness of PureSDN:
 
 If you want to show the collected information, you can set the parameters in setting.py. Also, you can change the setting as you like, such as the discovery period and monitor period. After that, you can see the information shown in the terminal.
 
-
+for more
+<br>
+<b>
+https://youtu.be/uXCtsSmHK_c
+</b>
+<br>
 ### Authors
 
 Brought to you by Huang MaChi (Chongqing University of Posts and Telecommunications, Chongqing, China.) and Li Cheng (Beijing University of Posts and Telecommunications. www.muzixing.com).
