@@ -1,4 +1,4 @@
-## PureSDN
+## PureSDN in python 3 tested on ubuntu 20.04
 
 PureSDN is a SDN-based traffic schduling application. Except the routing paths for hosts under the same switch, routing paths are calculated and installed completely by the Ryu controller.
 It includes a set of Ryu applications collecting basic network information, such as topology and free bandwidth of links. PureSDN can achieve shortest path forwarding based on HOP or BANDWIDTH.
@@ -62,7 +62,7 @@ Firstly, start up the network. An example is shown below:
 And then, go into the top directory of Ryu, and run the application. You are suggested to add arguments when starting Ryu. An example is shown below:
 
     $ cd ryu
-    $ ryu-manager --observe-links ryu/app/PureSDN/PureSDN.py --k_paths=4 --weight=bw --fanout=4
+    $ # clear && sudo ryu-manager PureSDN.py  /home/ubuntu/sdn/sources/flowmanager/flowmanager.py  --k_paths=4 --weight=bw --fanout=4 --observe-links --ofp-tcp-listen-port 6633
 
 NOTE: After these, we should wait for the network to complete the initiation for several seconds, because LLDP needs some time to discovery the network topology. We can't operate the network until "[GET NETWORK TOPOLOGY]" is printed in the terminal of the Ryu controller, otherwise, some error will occur. It may be about 10 seconds for fattree4, and a little longer for fattree8.
 
