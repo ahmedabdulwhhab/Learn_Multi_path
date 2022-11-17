@@ -1,7 +1,9 @@
-## Hedera
+## PureSDN
 
-Hedera is a SDN-based traffic schduling application implementating "Hedera", see the paper "Hedera: dynamic flow scheduling for data center networks" by Mohammad Al-Fares. Initially, network traffic is routed with ECMP. Once the speed of any flow in the switch exceeds 10% of the bandwidth of the link, routing path will be calculated and installed by the Ryu controller to reschedule the flow to other light loading path.
-It includes a set of Ryu applications collecting basic network information, such as topology and free bandwidth of links. Fortunately, our application supports load balancing based on dynamic traffic information.
+PureSDN is a SDN-based traffic schduling application. Except the routing paths for hosts under the same switch, routing paths are calculated and installed completely by the Ryu controller.
+It includes a set of Ryu applications collecting basic network information, such as topology and free bandwidth of links. PureSDN can achieve shortest path forwarding based on HOP or BANDWIDTH.
+You can specify the mode of computing shortest paths when starting Ryu by adding "weight" argument. Moreover, you can set "k_paths" argument to support K-Shortest paths computing.
+Fortunately, our application supports load balancing based on dynamic traffic information.
 
 The detailed information of the modules is shown below:
 
@@ -11,9 +13,7 @@ The detailed information of the modules is shown below:
 
 * Network Monitor is the module for collecting traffic information;
 
-* DemandEstimation is the module for estimating flow demand;
-
-* Hedera is the main module of the application;
+* PureSDN is the main module of the application;
 
 * Setting is the module including common setting.
 
@@ -30,7 +30,7 @@ The following softwares should have been installed in your machine.
 
 ### Download
 
-Download files into Ryu directory, for instance, 'ryu/ryu/app/Hedera' is OK.
+Download files into Ryu directory, for instance, 'ryu/ryu/app/PureSDN' is OK.
 
 
 ### Make some change
@@ -57,59 +57,21 @@ Note: Before doing the experiment, you should change the controller's IP address
 
 Firstly, start up the network. An example is shown below:
 
-    $ sudo python ryu/ryu/app/Hedera/fattree4.py
+    $ sudo python ryu/ryu/app/PureSDN/fattree4.py
 
 And then, go into the top directory of Ryu, and run the application. You are suggested to add arguments when starting Ryu. An example is shown below:
 
     $ cd ryu
-    $ ryu-manager --observe-links ryu/app/Hedera/Hedera.py --k_paths=4 --weight=hop --fanout=4
+    $ ryu-manager --observe-links ryu/app/PureSDN/PureSDN.py --k_paths=4 --weight=bw --fanout=4
 
-or:
+NOTE: After these, we should wait for the network to complete the initiation for several seconds, because LLDP needs some time to discovery the network topology. We can't operate the network until "[GET NETWORK TOPOLOGY]" is printed in the terminal of the Ryu controller, otherwise, some error will occur. It may be about 10 seconds for fattree4, and a little longer for fattree8.
 
-    $ ryu-manager --observe-links ryu/app/Hedera/Hedera.py --k_paths=16 --weight=hop --fanout=8
-
-NOTE: After these, we should wait for the network to complete the initiation for several seconds, because LLDP needs some time to discovery the network topology. We can't operate the network until 'Get network topology' is printed in the terminal of the Ryu controller, otherwise, some error will occur. It may be about 10 seconds for fattree4, and a little longer for fattree8.
-
-After that, test the correctness of Hedera:
+After that, test the correctness of PureSDN:
 
     mininet> pingall
     mininet> iperf
 
 If you want to show the collected information, you can set the parameters in setting.py. Also, you can change the setting as you like, such as the discovery period and monitor period. After that, you can see the information shown in the terminal.
-
-
-<br>
-My notes
-	first 2 packets are fialed.
-	------------------------------------------
-	h1 ping -c 4    10.0.0.15
-	PING 10.0.0.15 (10.0.0.15) 56(84) bytes of data.
-	64 bytes from 10.0.0.15: icmp_seq=3 ttl=64 time=1.32 ms
-	64 bytes from 10.0.0.15: icmp_seq=4 ttl=64 time=0.111 ms
-	
-	--- 10.0.0.15 ping statistics ---
-	4 packets transmitted, 2 received, 50% packet loss, time 3032ms
-	rtt min/avg/max/mdev = 0.111/0.713/1.315/0.602 ms
-	------------------------------------------
-	<b>the re-installation enables us to add the arguments --k_paths=4 --weight=hop --fanout=4</b>
-	<br>install Ryu from the source code::
-<br>
-<br>   % git clone https://github.com/faucetsdn/ryu.git
-<br>   % cd ryu; pip install
-<br> for me it is clone at location
-<br>  /home/ubuntu/sdn/sources/ryu
-<br>	sudo vim /home/ubuntu/sdn/sources/ryu/ryu/flags.py
-<br>	then re-install again
-<br>  /home/ubuntu/sdn/sources/ryu
-<br>  you must must must install it again (no choices)
-<br>  sudo python3 setup.py install
-<br>
-CONF.register_cli_opts([
-        # k_shortest_forwarding
-        cfg.IntOpt('k_paths', default=4, help='number of candidate paths of KSP.'),
-        cfg.StrOpt('weight', default='bw', help='weight type of computing shortest path.'),
-        cfg.IntOpt('fanout', default=4, help='switch fanout number.')])
-
 
 
 ### Authors
