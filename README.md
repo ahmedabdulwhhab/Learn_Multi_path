@@ -88,6 +88,25 @@ After that, test the correctness of Hedera:
 
 If you want to show the collected information, you can set the parameters in setting.py. Also, you can change the setting as you like, such as the discovery period and monitor period. After that, you can see the information shown in the terminal.
 
+<br>
+
+
+<br>
+My notes
+	first 2 packets are fialed.
+	------------------------------------------
+	h1 ping -c 4    10.0.0.15
+	PING 10.0.0.15 (10.0.0.15) 56(84) bytes of data.
+	64 bytes from 10.0.0.15: icmp_seq=3 ttl=64 time=1.32 ms
+	64 bytes from 10.0.0.15: icmp_seq=4 ttl=64 time=0.111 ms
+	
+	--- 10.0.0.15 ping statistics ---
+	4 packets transmitted, 2 received, 50% packet loss, time 3032ms
+	rtt min/avg/max/mdev = 0.111/0.713/1.315/0.602 ms
+	------------------------------------------
+	the re-installation enables us to add the arguments --k_paths=4 --weight=hop --fanout=4
+    
+<br>
 
 ### Authors
 
