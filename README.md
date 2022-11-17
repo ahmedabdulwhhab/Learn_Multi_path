@@ -1,4 +1,5 @@
-## PureSDN in python 3 tested on ubuntu 20.04
+## PureSDN in python 3 tested on Ubuntu 20.04
+# we tested only fat-tree 4.
 
 PureSDN is a SDN-based traffic schduling application. Except the routing paths for hosts under the same switch, routing paths are calculated and installed completely by the Ryu controller.
 It includes a set of Ryu applications collecting basic network information, such as topology and free bandwidth of links. PureSDN can achieve shortest path forwarding based on HOP or BANDWIDTH.
