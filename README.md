@@ -105,6 +105,9 @@ My notes<br>
 	rtt min/avg/max/mdev = 0.111/0.713/1.315/0.602 ms<br>
 	------------------------------------------<br>
 	the re-installation enables us to add the arguments --k_paths=4 --weight=hop --fanout=4<br>
+	if not added<br>
+	The error will be <br>
+	<b>ryu-manager: error: unrecognized arguments: --k_paths=4 --weight=hop --fanout=4<b><br>
     <br>
     <br>
 <br>
