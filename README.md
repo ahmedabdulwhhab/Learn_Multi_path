@@ -1,15 +1,5 @@
-# Learn_Multi_path
-under test.                   taken from https://github.com/Huangmachi/Hedera
-
-
-<br>
-<br>
 ## Hedera
-<br>
-Plese watch this video for more
-<br>
-https://youtu.be/6Ea-jDUiikY
-<br>
+
 Hedera is a SDN-based traffic schduling application implementating "Hedera", see the paper "Hedera: dynamic flow scheduling for data center networks" by Mohammad Al-Fares. Initially, network traffic is routed with ECMP. Once the speed of any flow in the switch exceeds 10% of the bandwidth of the link, routing path will be calculated and installed by the Ryu controller to reschedule the flow to other light loading path.
 It includes a set of Ryu applications collecting basic network information, such as topology and free bandwidth of links. Fortunately, our application supports load balancing based on dynamic traffic information.
 
@@ -67,13 +57,12 @@ Note: Before doing the experiment, you should change the controller's IP address
 
 Firstly, start up the network. An example is shown below:
 
-    $ sudo mn -c && sudo python3 my_topo.py
-
+    $ sudo python ryu/ryu/app/Hedera/fattree4.py
 
 And then, go into the top directory of Ryu, and run the application. You are suggested to add arguments when starting Ryu. An example is shown below:
 
     $ cd ryu
-    $  clear && sudo ryu-manager ../../projects/Learn_Multi_path/Hedera/14112022/Hedera.py    /home/ubuntu/sdn/sources/flowmanager/flowmanager.py  --k_paths=4 --weight=hop --fanout=4 --observe-links --ofp-tcp-listen-port 6633
+    $ ryu-manager --observe-links ryu/app/Hedera/Hedera.py --k_paths=4 --weight=hop --fanout=4
 
 or:
 
@@ -83,34 +72,44 @@ NOTE: After these, we should wait for the network to complete the initiation for
 
 After that, test the correctness of Hedera:
 
-    mininet> pingall              - Gives Error
+    mininet> pingall
     mininet> iperf
 
 If you want to show the collected information, you can set the parameters in setting.py. Also, you can change the setting as you like, such as the discovery period and monitor period. After that, you can see the information shown in the terminal.
 
-<br>
-
 
 <br>
-My notes<br>
-	first 2 packets are fialed.<br>
-	------------------------------------------<br>
-	h1 ping -c 4    10.0.0.15<br>
-	PING 10.0.0.15 (10.0.0.15) 56(84) bytes of data.<br>
-	64 bytes from 10.0.0.15: icmp_seq=3 ttl=64 time=1.32 ms<br>
-	64 bytes from 10.0.0.15: icmp_seq=4 ttl=64 time=0.111 ms<br>
-	<br>
-	--- 10.0.0.15 ping statistics ---<br>
-	4 packets transmitted, 2 received, 50% packet loss, time 3032ms<br>
-	rtt min/avg/max/mdev = 0.111/0.713/1.315/0.602 ms<br>
-	------------------------------------------<br>
-	the re-installation enables us to add the arguments --k_paths=4 --weight=hop --fanout=4<br>
-	if not added<br>
-	The error will be <br>
-	<b>ryu-manager: error: unrecognized arguments: --k_paths=4 --weight=hop --fanout=4<b><br>
-    <br>
-    <br>
+My notes
+	first 2 packets are fialed.
+	------------------------------------------
+	h1 ping -c 4    10.0.0.15
+	PING 10.0.0.15 (10.0.0.15) 56(84) bytes of data.
+	64 bytes from 10.0.0.15: icmp_seq=3 ttl=64 time=1.32 ms
+	64 bytes from 10.0.0.15: icmp_seq=4 ttl=64 time=0.111 ms
+	
+	--- 10.0.0.15 ping statistics ---
+	4 packets transmitted, 2 received, 50% packet loss, time 3032ms
+	rtt min/avg/max/mdev = 0.111/0.713/1.315/0.602 ms
+	------------------------------------------
+	<b>the re-installation enables us to add the arguments --k_paths=4 --weight=hop --fanout=4</b>
+	<br>install Ryu from the source code::
 <br>
+<br>   % git clone https://github.com/faucetsdn/ryu.git
+<br>   % cd ryu; pip install
+<br> for me it is clone at location
+<br>  /home/ubuntu/sdn/sources/ryu
+<br>	sudo vim /home/ubuntu/sdn/sources/ryu/ryu/flags.py
+
+    CONF.register_cli_opts([
+        # k_shortest_forwarding
+        cfg.IntOpt('k_paths', default=4, help='number of candidate paths of KSP.'),
+        cfg.StrOpt('weight', default='bw', help='weight type of computing shortest path.'),
+        cfg.IntOpt('fanout', default=4, help='switch fanout number.')])
+
+<br>
+<br>	then re-install again
+<br>  /home/ubuntu/sdn/sources/ryu
+<br>  sudo python3 setup.py install
 
 ### Authors
 
