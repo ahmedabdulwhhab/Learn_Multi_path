@@ -1,0 +1,1718 @@
+1.			ping  (first 2 packets are failed)
+root@ubuntu:/home/ubuntu/sdn/projects/Learn_Multi_path/Hedera/15112022# ping -c 4    10.0.0.16
+PING 10.0.0.16 (10.0.0.16) 56(84) bytes of data.
+64 bytes from 10.0.0.16: icmp_seq=3 ttl=64 time=1.43 ms
+64 bytes from 10.0.0.16: icmp_seq=4 ttl=64 time=0.197 ms
+
+--- 10.0.0.16 ping statistics ---
+4 packets transmitted, 2 received, 50% packet loss, time 3046ms
+rtt min/avg/max/mdev = 0.197/0.815/1.433/0.618 ms
+
+------------------------------------------
+h1 ping -c 4    10.0.0.15
+PING 10.0.0.15 (10.0.0.15) 56(84) bytes of data.
+64 bytes from 10.0.0.15: icmp_seq=3 ttl=64 time=1.32 ms
+64 bytes from 10.0.0.15: icmp_seq=4 ttl=64 time=0.111 ms
+
+--- 10.0.0.15 ping statistics ---
+4 packets transmitted, 2 received, 50% packet loss, time 3032ms
+rtt min/avg/max/mdev = 0.111/0.713/1.315/0.602 ms
+
+------------------------------------------
+h1 ping -c 4    10.0.0.14
+PING 10.0.0.14 (10.0.0.14) 56(84) bytes of data.
+64 bytes from 10.0.0.14: icmp_seq=3 ttl=64 time=0.629 ms
+64 bytes from 10.0.0.14: icmp_seq=4 ttl=64 time=0.202 ms
+
+--- 10.0.0.14 ping statistics ---
+4 packets transmitted, 2 received, 50% packet loss, time 3073ms
+rtt min/avg/max/mdev = 0.202/0.415/0.629/0.213 ms
+
+------------------------------------------
+h1 ping -c4    10.0.0.13
+PING 10.0.0.13 (10.0.0.13) 56(84) bytes of data.
+64 bytes from 10.0.0.13: icmp_seq=3 ttl=64 time=0.695 ms
+64 bytes from 10.0.0.13: icmp_seq=4 ttl=64 time=0.091 ms
+
+--- 10.0.0.13 ping statistics ---
+4 packets transmitted, 2 received, 50% packet loss, time 3067ms
+rtt min/avg/max/mdev = 0.091/0.393/0.695/0.302 ms
+
+------------------------------------------
+h3  ping -c 4    10.0.0.16
+PING 10.0.0.16 (10.0.0.16) 56(84) bytes of data.
+64 bytes from 10.0.0.16: icmp_seq=3 ttl=64 time=0.572 ms
+64 bytes from 10.0.0.16: icmp_seq=4 ttl=64 time=0.321 ms
+
+--- 10.0.0.16 ping statistics ---
+4 packets transmitted, 2 received, 50% packet loss, time 3070ms
+rtt min/avg/max/mdev = 0.321/0.446/0.572/0.125 ms
+
+
+-------------------------
+h1 ping -c 4 h2           
+PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
+64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=1.06 ms
+64 bytes from 10.0.0.2: icmp_seq=3 ttl=64 time=0.108 ms
+64 bytes from 10.0.0.2: icmp_seq=4 ttl=64 time=0.139 ms
+
+--- 10.0.0.2 ping statistics ---
+4 packets transmitted, 3 received, 25% packet loss, time 3023ms
+rtt min/avg/max/mdev = 0.108/0.436/1.061/0.442 ms
+
+
+
+2.			ARP Request/Reply		for old ryu_multipath
+			ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------12
+
+
+
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.1
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (3, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.1  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.1
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.1
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (3, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.1  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.1
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.1
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (3, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.1  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.1
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.1
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (3, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.1  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.1
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.1
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (3, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.1  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.1
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.1
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (3, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.1  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.1
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.1
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (3, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.1  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (13, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.2
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 3), 13: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 13]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {13: (4, 2), 12: (3, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [13, 12, 4, 42, 43]
+ip_src  =  10.0.0.2  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.3
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (3, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.3  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (14, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.4
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 1), 12: (2, 4), 14: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 12, 14]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {14: (4, 2), 12: (4, 2), 4: (1, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [14, 12, 4, 42, 43]
+ip_src  =  10.0.0.4  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.5
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (3, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.5  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (23, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.6
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 3), 23: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 23]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {23: (4, 2), 22: (3, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [23, 22, 4, 42, 43]
+ip_src  =  10.0.0.6  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.7
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (3, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.7  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (24, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.8
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 2), 22: (2, 4), 24: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 22, 24]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {24: (4, 2), 22: (4, 2), 4: (2, 4), 42: (2, 3), 43: (2, 3)}
+****************************key_val of single path is  [24, 22, 4, 42, 43]
+ip_src  =  10.0.0.8  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.9
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (3, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.9  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------1
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------2
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------3
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------4
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------5
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------6
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------7
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------8
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------9
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------10
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (33, 4)  src_ip =  10.0.0.13  dst_ip =  10.0.0.10
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 3), 33: (2, 4)}
+****************************key_val of single path is  [43, 42, 4, 32, 33]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.10------------------------------------------12
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {33: (4, 1), 31: (3, 2), 2: (3, 4), 41: (2, 3), 43: (1, 3)}
+****************************key_val of single path is  [33, 31, 2, 41, 43]
+ip_src  =  10.0.0.10  ip_dst =  10.0.0.13
+first switch in the loop port number is  4
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+inside ARP_REQUEST h1=  (43, 3)  h2=  (34, 3)  src_ip =  10.0.0.13  dst_ip =  10.0.0.11
+ shortest path cost from src switch to dst switch is  {43: (3, 2), 42: (3, 2), 4: (4, 3), 32: (2, 4), 34: (2, 3)}
+****************************key_val of single path is  [43, 42, 4, 32, 34]
+ip_src  =  10.0.0.13  ip_dst =  10.0.0.11
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
+ shortest path cost from src switch to dst switch is  {34: (3, 1), 31: (4, 1), 1: (3, 4), 41: (1, 3), 43: (1, 3)}
+****************************key_val of single path is  [34, 31, 1, 41, 43]
+ip_src  =  10.0.0.11  ip_dst =  10.0.0.13
+first switch in the loop port number is  3
+Packet is recevied from port   4
+Error in install_paths
