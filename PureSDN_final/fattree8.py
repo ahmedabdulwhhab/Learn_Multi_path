@@ -1,5 +1,5 @@
 # Copyright (C) 2016 Huang MaChi at Chongqing University
-# of Posts and Telecommunications, China.
+# of Posts and Telecommunications, Chongqing, China.
 # Copyright (C) 2016 Li Cheng at Beijing University of Posts
 # and Telecommunications. www.muzixing.com
 #
@@ -59,7 +59,7 @@ class Fattree(Topo):
 		"""
 			Create switches.
 		"""
-		for i in range(1, int(number+1)):
+		for i in xrange(1, number+1):
 			PREFIX = str(level) + "00"
 			if i >= 10:
 				PREFIX = str(level) + "0"
@@ -78,7 +78,7 @@ class Fattree(Topo):
 		"""
 			Create hosts.
 		"""
-		for i in range(1, int(NUMBER+1)):
+		for i in xrange(1, NUMBER+1):
 			if i >= 100:
 				PREFIX = "h"
 			elif i >= 10:
@@ -93,28 +93,28 @@ class Fattree(Topo):
 		"""
 		# Core to Agg
 		end = self.pod/2
-		for x in range(0, int(self.iAggLayerSwitch), int(end)):
-			for i in range(0, int(end)):
-				for j in range(0, int(end)):
+		for x in xrange(0, self.iAggLayerSwitch, end):
+			for i in xrange(0, end):
+				for j in xrange(0, end):
 					self.addLink(
-						self.CoreSwitchList[int(i*end+j)],
+						self.CoreSwitchList[i*end+j],
 						self.AggSwitchList[x+i],
 						bw=bw_c2a, max_queue_size=1000)   # use_htb=False
 
 		# Agg to Edge
-		for x in range(0, int(self.iAggLayerSwitch), int(end)):
-			for i in range(0, int(end)):
-				for j in range(0, int(end)):
+		for x in xrange(0, self.iAggLayerSwitch, end):
+			for i in xrange(0, end):
+				for j in xrange(0, end):
 					self.addLink(
 						self.AggSwitchList[x+i], self.EdgeSwitchList[x+j],
 						bw=bw_a2e, max_queue_size=1000)   # use_htb=False
 
 		# Edge to Host
-		for x in range(0, int(self.iEdgeLayerSwitch)):
-			for i in range(0, int(self.density)):
+		for x in xrange(0, self.iEdgeLayerSwitch):
+			for i in xrange(0, self.density):
 				self.addLink(
 					self.EdgeSwitchList[x],
-					self.HostList[int(self.density * x + i)],
+					self.HostList[self.density * x + i],
 					bw=bw_e2h, max_queue_size=1000)   # use_htb=False
 
 	def set_ovs_protocol_13(self,):
@@ -133,7 +133,7 @@ class Fattree(Topo):
 
 def set_host_ip(net, topo):
 	hostlist = []
-	for k in range(len(topo.HostList)):
+	for k in xrange(len(topo.HostList)):
 		hostlist.append(net.get(topo.HostList[k]))
 	i = 1
 	j = 1
@@ -174,14 +174,14 @@ def create_subnetList(topo, num):
 
 def install_proactive(net, topo):
 	"""
-		Install proactive flow entries for switches.
+		Install direct flow entries for edge switches.
 	"""
 	# Edge Switch
 	for sw in topo.EdgeSwitchList:
 		num = int(sw[-2:])
 
 		# Downstream.
-		for i in range(1, int(topo.density+1)):
+		for i in xrange(1, topo.density+1):
 			cmd = "ovs-ofctl add-flow %s -O OpenFlow13 \
 				'table=0,idle_timeout=0,hard_timeout=0,priority=10,arp, \
 				nw_dst=10.%d.0.%d,actions=output:%d'" % (sw, num, i, topo.pod/2+i)
@@ -191,39 +191,12 @@ def install_proactive(net, topo):
 				nw_dst=10.%d.0.%d,actions=output:%d'" % (sw, num, i, topo.pod/2+i)
 			os.system(cmd)
 
-		# Upstream.
-		# Install group entries.
-		if topo.pod == 4:
-			cmd = "ovs-ofctl add-group %s -O OpenFlow13 \
-			'group_id=1,type=select,bucket=output:1,bucket=output:2'" % sw
-		elif topo.pod == 8:
-			cmd = "ovs-ofctl add-group %s -O OpenFlow13 \
-			'group_id=1,type=select,bucket=output:1,bucket=output:2,\
-			bucket=output:3,bucket=output:4'" % sw
-		else:
-			pass
-		os.system(cmd)
-		# Install flow entries.
-		Edge_List = [i for i in range(1, int(1 + topo.pod ** 2 / 2))]
-		for i in Edge_List:
-			if i != num:
-				for j in range(1, int(topo.pod / 2 + 1)):
-					for k in range(1, int(topo.pod / 2 + 1)):
-						cmd = "ovs-ofctl add-flow %s -O OpenFlow13 \
-						'table=0,idle_timeout=0,hard_timeout=0,priority=10,arp,\
-						nw_src=10.%d.0.%d,nw_dst=10.%d.0.%d,actions=group:1'" % (sw, num, j, i, k)
-						os.system(cmd)
-						cmd = "ovs-ofctl add-flow %s -O OpenFlow13 \
-						'table=0,idle_timeout=0,hard_timeout=0,priority=10,ip,\
-						nw_src=10.%d.0.%d,nw_dst=10.%d.0.%d,actions=group:1'" % (sw, num, j, i, k)
-						os.system(cmd)
-
 	# Aggregate Switch
+	# Downstream.
 	for sw in topo.AggSwitchList:
 		num = int(sw[-2:])
 		subnetList = create_subnetList(topo, num)
 
-		# Downstream.
 		k = 1
 		for i in subnetList:
 			cmd = "ovs-ofctl add-flow %s -O OpenFlow13 \
@@ -236,29 +209,11 @@ def install_proactive(net, topo):
 			os.system(cmd)
 			k += 1
 
-		# Upstream.
-		if topo.pod == 4:
-			cmd = "ovs-ofctl add-group %s -O OpenFlow13 \
-			'group_id=1,type=select,bucket=output:1,bucket=output:2'" % sw
-		elif topo.pod == 8:
-			cmd = "ovs-ofctl add-group %s -O OpenFlow13 \
-			'group_id=1,type=select,bucket=output:1,bucket=output:2,\
-			bucket=output:3,bucket=output:4'" % sw
-		else:
-			pass
-		os.system(cmd)
-		cmd = "ovs-ofctl add-flow %s -O OpenFlow13 \
-		'table=0,priority=10,arp,actions=group:1'" % sw
-		os.system(cmd)
-		cmd = "ovs-ofctl add-flow %s -O OpenFlow13 \
-		'table=0,priority=10,ip,actions=group:1'" % sw
-		os.system(cmd)
-
 	# Core Switch
 	for sw in topo.CoreSwitchList:
 		j = 1
 		k = 1
-		for i in range(1, int(len(topo.EdgeSwitchList)+1)):
+		for i in xrange(1, len(topo.EdgeSwitchList)+1):
 			cmd = "ovs-ofctl add-flow %s -O OpenFlow13 \
 				'table=0,idle_timeout=0,hard_timeout=0,priority=10,arp, \
 				nw_dst=10.%d.0.0/16, actions=output:%d'" % (sw, i, j)
@@ -292,10 +247,11 @@ def pingTest(net):
 	"""
 	net.pingAll()
 
-def createTopo(pod, density, ip="192.168.1.4", port=6633, bw_c2a=10, bw_a2e=10, bw_e2h=10):
+def createTopo(pod, density, ip="192.168.56.101", port=6653, bw_c2a=10, bw_a2e=10, bw_e2h=10):
 	"""
 		Create network topology and run the Mininet.
 	"""
+	# Create Topo.
 	topo = Fattree(pod, density)
 	topo.createNodes()
 	topo.createLinks(bw_c2a=bw_c2a, bw_a2e=bw_a2e, bw_e2h=bw_e2h)
@@ -327,5 +283,5 @@ if __name__ == '__main__':
 	if os.getuid() != 0:
 		logging.debug("You are NOT root")
 	elif os.getuid() == 0:
-		# createTopo(4, 2)
+		#createTopo(4, 2)
 		createTopo(8, 4)
