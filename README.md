@@ -92,20 +92,21 @@ If you want to show the collected information, you can set the parameters in set
 
 
 <br>
-My notes
-	first 2 packets are fialed.
-	------------------------------------------
-	h1 ping -c 4    10.0.0.15
-	PING 10.0.0.15 (10.0.0.15) 56(84) bytes of data.
-	64 bytes from 10.0.0.15: icmp_seq=3 ttl=64 time=1.32 ms
-	64 bytes from 10.0.0.15: icmp_seq=4 ttl=64 time=0.111 ms
-	
-	--- 10.0.0.15 ping statistics ---
-	4 packets transmitted, 2 received, 50% packet loss, time 3032ms
-	rtt min/avg/max/mdev = 0.111/0.713/1.315/0.602 ms
-	------------------------------------------
-	the re-installation enables us to add the arguments --k_paths=4 --weight=hop --fanout=4
-    
+My notes<br>
+	first 2 packets are fialed.<br>
+	------------------------------------------<br>
+	h1 ping -c 4    10.0.0.15<br>
+	PING 10.0.0.15 (10.0.0.15) 56(84) bytes of data.<br>
+	64 bytes from 10.0.0.15: icmp_seq=3 ttl=64 time=1.32 ms<br>
+	64 bytes from 10.0.0.15: icmp_seq=4 ttl=64 time=0.111 ms<br>
+	<br>
+	--- 10.0.0.15 ping statistics ---<br>
+	4 packets transmitted, 2 received, 50% packet loss, time 3032ms<br>
+	rtt min/avg/max/mdev = 0.111/0.713/1.315/0.602 ms<br>
+	------------------------------------------<br>
+	the re-installation enables us to add the arguments --k_paths=4 --weight=hop --fanout=4<br>
+    <br>
+    <br>
 <br>
 
 ### Authors
