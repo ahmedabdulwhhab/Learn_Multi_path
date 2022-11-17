@@ -49,7 +49,7 @@ To register parsing parameters, you NEED to add the following code into the end 
 
 You must reinstall Ryu, so that you can run the new code. In the top directory of Ryu project:
 
-    sudo python setup.py install
+    sudo python3 setup.py install
 
 
 ### Start
@@ -59,7 +59,7 @@ Note: Before doing the experiment, you should change the controller's IP address
 Firstly, start up the network. An example is shown below:
     $ sudo git clone https://github.com/ahmedabdulwhhab/Learn_Multi_path
     $ cd Learn_Multi_path/PureSDN_final
-    $ sudo python ryu/ryu/app/PureSDN/fattree4.py
+    $ sudo python3 ryu/ryu/app/PureSDN/fattree4.py
 
 And then, go into the top directory of Ryu, and run the application. You are suggested to add arguments when starting Ryu. An example is shown below:
 
