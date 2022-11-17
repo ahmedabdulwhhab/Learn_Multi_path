@@ -99,17 +99,18 @@ My notes
 <br> for me it is clone at location
 <br>  /home/ubuntu/sdn/sources/ryu
 <br>	sudo vim /home/ubuntu/sdn/sources/ryu/ryu/flags.py
-
-    CONF.register_cli_opts([
+<br>	then re-install again
+<br>  /home/ubuntu/sdn/sources/ryu
+<br>  you must must must install it again (no choices)
+<br>  sudo python3 setup.py install
+<br>
+CONF.register_cli_opts([
         # k_shortest_forwarding
         cfg.IntOpt('k_paths', default=4, help='number of candidate paths of KSP.'),
         cfg.StrOpt('weight', default='bw', help='weight type of computing shortest path.'),
         cfg.IntOpt('fanout', default=4, help='switch fanout number.')])
 
-<br>
-<br>	then re-install again
-<br>  /home/ubuntu/sdn/sources/ryu
-<br>  sudo python3 setup.py install
+
 
 ### Authors
 
