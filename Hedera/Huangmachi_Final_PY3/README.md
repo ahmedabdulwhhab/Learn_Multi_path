@@ -49,7 +49,7 @@ To register parsing parameters, you NEED to add the following code into the end 
 
 You must reinstall Ryu, so that you can run the new code. In the top directory of Ryu project:
 
-    sudo python setup.py install
+    sudo python3 setup.py install
 
 
 ### Start
