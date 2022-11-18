@@ -178,4 +178,4 @@ if __name__ == '__main__':
     if os.getuid() != 0:
         logger.debug("You are NOT root")
     elif os.getuid() == 0:
-        createTopo(pod = 8,density =  2)
+        createTopo(pod = 8,density =  4)
