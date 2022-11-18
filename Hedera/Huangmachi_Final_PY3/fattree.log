@@ -1,0 +1,3848 @@
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2008) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h001) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h002) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h003) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h004) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h005) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h006) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h007) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h009) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h010) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h011) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h012) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h013) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h014) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h015) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h016) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+
+WARNING:mininet:Unable to contact the remote controller at 192.168.1.4:6633
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Starting 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:...
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:
+
+INFO:mininet:*** Starting CLI:
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 48 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 16 hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Done
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2008) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h001) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h002) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h003) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h004) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h005) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h006) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h007) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h009) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h010) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h011) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h012) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h013) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h014) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h015) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h016) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Starting 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:...
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:
+
+INFO:mininet:*** Starting CLI:
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h002 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:stopping h002 
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 48 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 16 hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Done
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2008) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h001) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h002) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h003) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h004) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h005) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h006) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h007) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h009) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h010) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h011) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h012) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h013) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h014) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h015) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h016) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Starting 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:...
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:
+
+INFO:mininet:*** Starting CLI:
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h002 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:stopping h002 
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:stopping h001 
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 48 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 16 hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Done
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2008) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h001) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h002) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h003) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h004) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h005) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h006) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h007) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h009) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h010) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h011) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h012) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h013) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h014) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h015) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h016) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Starting 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:...
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:
+
+INFO:mininet:*** Starting CLI:
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:stopping h001 
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:h002 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:stopping h001 
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 48 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 16 hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Done
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2008) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h001) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h002) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h003) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h004) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h005) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h006) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h007) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h009) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h010) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h011) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h012) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h013) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h014) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h015) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h016) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+
+WARNING:mininet:Unable to contact the remote controller at 192.168.1.4:6633
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Starting 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:...
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:
+
+INFO:mininet:*** Starting CLI:
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:stopping h001 
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 48 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 16 hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Done
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2008) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h001) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h002) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h003) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h004) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h005) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h006) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h007) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h009) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h010) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h011) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h012) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h013) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h014) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h015) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h016) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+
+WARNING:mininet:Unable to contact the remote controller at 192.168.1.4:6633
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Starting 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:...
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:
+
+INFO:mininet:*** Starting CLI:
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 48 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 16 hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Done
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2008) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h001) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h002) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h003) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h004) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h005) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h006) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h007) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h009) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h010) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h011) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h012) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h013) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h014) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h015) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h016) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Starting 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:...
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:
+
+INFO:mininet:*** Starting CLI:
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h002 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:stopping h002 
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:stopping h001 
+
+Level 25:mininet:
+Interrupt
+
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 48 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 16 hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Done
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1001, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2001) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2003) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2005) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1002, s2007) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1003, s2008) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2002) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2004) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2006) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(s1004, s2008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2001, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3001) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2002, s3002) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2003, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3003) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2004, s3004) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2005, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3005) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2006, s3006) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2007, s3008) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3007) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(s2008, s3008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h001) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3001, h002) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h003) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3002, h004) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h005) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3003, h006) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h007) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3004, h008) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h009) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3005, h010) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h011) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3006, h012) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h013) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3007, h014) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h015) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(s3008, h016) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h001 
+INFO:mininet:h002 
+INFO:mininet:h003 
+INFO:mininet:h004 
+INFO:mininet:h005 
+INFO:mininet:h006 
+INFO:mininet:h007 
+INFO:mininet:h008 
+INFO:mininet:h009 
+INFO:mininet:h010 
+INFO:mininet:h011 
+INFO:mininet:h012 
+INFO:mininet:h013 
+INFO:mininet:h014 
+INFO:mininet:h015 
+INFO:mininet:h016 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:controller 
+INFO:mininet:
+
+INFO:mininet:*** Starting 20 switches
+
+INFO:mininet:s1001 
+INFO:mininet:s1002 
+INFO:mininet:s1003 
+INFO:mininet:s1004 
+INFO:mininet:s2001 
+INFO:mininet:s2002 
+INFO:mininet:s2003 
+INFO:mininet:s2004 
+INFO:mininet:s2005 
+INFO:mininet:s2006 
+INFO:mininet:s2007 
+INFO:mininet:s2008 
+INFO:mininet:s3001 
+INFO:mininet:s3002 
+INFO:mininet:s3003 
+INFO:mininet:s3004 
+INFO:mininet:s3005 
+INFO:mininet:s3006 
+INFO:mininet:s3007 
+INFO:mininet:s3008 
+INFO:mininet:...
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.20Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.10Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:(0.05Mbit) 
+INFO:mininet:
+
+INFO:mininet:*** Starting CLI:
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h002 -> 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:X 
+Level 25:mininet:
+Interrupt
+
+INFO:mininet:stopping h002 
+
+Level 25:mininet:*** Ping: testing ping reachability
+
+Level 25:mininet:h001 -> 
+Level 25:mininet:X 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h002 -> 
+Level 25:mininet:h001 
+Level 25:mininet:X 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h003 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h004 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h005 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h006 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h007 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h008 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h009 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h010 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h011 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h012 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h013 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h014 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h015 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h015 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h016 
+Level 25:mininet:
+
+Level 25:mininet:h016 -> 
+Level 25:mininet:h001 
+Level 25:mininet:h002 
+Level 25:mininet:h003 
+Level 25:mininet:h004 
+Level 25:mininet:h005 
+Level 25:mininet:h006 
+Level 25:mininet:h007 
+Level 25:mininet:h008 
+Level 25:mininet:h009 
+Level 25:mininet:h010 
+Level 25:mininet:h011 
+Level 25:mininet:h012 
+Level 25:mininet:h013 
+Level 25:mininet:h014 
+Level 25:mininet:h015 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (238/240 received)
+
