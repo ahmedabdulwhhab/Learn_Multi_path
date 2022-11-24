@@ -30,7 +30,8 @@ The following softwares should have been installed in your machine.
 
 
 ### Download
-
+% git clone https://github.com/faucetsdn/ryu.git
+% cd ryu; pip install 
 Download files into Ryu directory, for instance, 'ryu/ryu/app/PureSDN' is OK.
 
 
